@@ -1,0 +1,22 @@
+mean x
+mean y
+mean z
+
+number of points
+
+std dev x
+std dev y
+std dev z
+
+range x
+range y
+range z
+
+ratio of range(x)/range(y)
+ratio of range(y)/range(x)
+
+ratio of range(x)/range(z)
+ratio of range(z)/range(x)
+
+ratio of range(y)/range(z)
+ratio of range(z)/range(y)
