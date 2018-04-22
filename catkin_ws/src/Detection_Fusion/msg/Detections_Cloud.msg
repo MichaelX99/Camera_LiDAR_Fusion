@@ -1,0 +1,4 @@
+sensor_msgs/PointCloud2 pcloud
+Image_Detections detections
+sensor_msgs/Image image
+string filename

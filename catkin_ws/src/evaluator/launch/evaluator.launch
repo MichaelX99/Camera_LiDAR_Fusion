@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find publisher)/launch/publisher.launch"/>
+
+    <param name="home_dir" value="$(find evaluator)"/>
+
+    <node pkg="evaluator" type="evaluator.py" name="evaluator" output="screen" cwd="node"/>
+</launch>

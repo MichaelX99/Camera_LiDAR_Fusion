@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="detection_fusion" type="image_detector_node.py" name="image_detector_node" output="screen" cwd="node"/>
+
+    <param name="image_model" value="$(find detection_fusion)/models/frozen_image_model.pb" />
+
+    <param name="class_weight" value="$(find detection_fusion)/models/class_output_kernel.txt" />
+    <param name="class_bias" value="$(find detection_fusion)/models/class_output_bias.txt" />
+    <param name="length_weight" value="$(find detection_fusion)/models/length_output_kernel.txt" />
+    <param name="length_bias" value="$(find detection_fusion)/models/length_output_bias.txt" />
+    <param name="z_weight" value="$(find detection_fusion)/models/z_output_kernel.txt" />
+    <param name="z_bias" value="$(find detection_fusion)/models/z_output_bias.txt" />
+    <param name="layer_weight" value="$(find detection_fusion)/models/layer1_kernel.txt" />
+    <param name="layer_bias" value="$(find detection_fusion)/models/layer1_bias.txt" />
+    <param name="rotation_weight" value="$(find detection_fusion)/models/z_output_kernel.txt" />
+    <param name="rotation_bias" value="$(find detection_fusion)/models/z_output_bias.txt" />
+
+    <param name="transforms" value="$(find detection_fusion)/models/avg_transforms.txt" />
+
+    <node pkg="detection_fusion" type="detection_fusion" name="fusion_node" output="screen"/>
+
+</launch>
